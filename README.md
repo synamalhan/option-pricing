@@ -27,7 +27,7 @@ You can install the required dependencies by running:
 ```bash
 pip install -r requirements.txt
 ```
-### Example `requirements.txt` file:
+### `requirements.txt` file:
 ```
 streamlit  
 numpy  
