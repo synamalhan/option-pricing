@@ -8,7 +8,8 @@ The **Option Pricing and Risk Assessment Tool** provides a simple yet powerful w
 
 This tool also includes risk assessment metrics like **Value at Risk (VaR)** and **Expected Shortfall (ES)** to help evaluate the potential downside risk.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HZKh0vNGbHU?si=EbPVsWfnayQNgDFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Watch the video](./image.png)](https://youtu.be/HZKh0vNGbHU?si=N9h_U9xDd868__Go)
+
 
 ## Features
 - **Black-Scholes Pricing**: Calculate the price of **Call** and **Put** options.
