@@ -30,9 +30,6 @@ requirements.txt
 .DS_Store
 Thumbs.db
 
-# Streamlit cached files
-.streamlit/
-
 # IDEs and Editors
 .vscode/
 .idea/
