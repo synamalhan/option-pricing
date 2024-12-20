@@ -1,4 +1,4 @@
-# Option Pricing and Risk Assessment Tool
+# 💲 Option Pricing and Risk Assessment Tool 💲
 
 ## Overview
 
