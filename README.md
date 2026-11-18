@@ -1,5 +1,7 @@
 # 💰 Option Pricing and Risk Assessment Tool 💰
 
+![Architecture](docs/architecture.svg)
+
 ## Overview
 
 The **Option Pricing and Risk Assessment Tool** provides a simple yet powerful way to calculate the fair value of options and evaluate the associated risks using two methods:  
