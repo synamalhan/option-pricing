@@ -1,4 +1,4 @@
-# 💰 Option Pricing & Risk Lab
+# Option Pricing & Risk Lab
 
 An interactive Streamlit dashboard for pricing European options and studying their risk. It prices every option two ways, with the **closed-form Black-Scholes formula** and with **Monte Carlo simulation**. You can watch the simulation converge to the exact answer, see how the price reacts to each input, and measure the downside of holding the option.
 
@@ -54,7 +54,7 @@ All numbers are measured on the reference contract (at-the-money call, S₀ = K 
 
 ## A tour of the dashboard
 
-### 1. 📐 Pricing & Greeks
+### 1. Pricing & Greeks
 
 The top row compares the two engines. Black-Scholes gives the exact price, and the Monte Carlo card shows how far the simulation landed from it. The **MC 95% interval** card shows the simulation's own uncertainty, which shrinks with √N.
 
@@ -62,7 +62,7 @@ The chart plots the option's value today against its payoff at expiry. The **sha
 
 ![Pricing & Greeks](docs/screenshots/pricing.png)
 
-### 2. 🎲 Monte Carlo
+### 2. Monte Carlo
 
 - **Left:** 150 simulated geometric Brownian motion paths, with the 5th, 50th and 95th percentiles.
 - **Right:** the distribution of terminal prices S_T. Paths that finish in the money are highlighted, and the strike and forward price are marked.
@@ -70,14 +70,14 @@ The chart plots the option's value today against its payoff at expiry. The **sha
 
 ![Monte Carlo](docs/screenshots/montecarlo.png)
 
-### 3. 🌡️ Sensitivity
+### 3. Sensitivity
 
-- **Heatmap:** the option price across a grid of spot and volatility values. The ✕ marks your current inputs.
+- **Heatmap:** the option price across a grid of spot and volatility values. The white cross marks your current inputs.
 - **Greek profiles:** pick any Greek and see it across spot prices at three maturities. As expiry approaches, delta becomes a step function while gamma and theta spike at the strike. This is why short-dated at-the-money options are the hardest to hedge.
 
 ![Sensitivity](docs/screenshots/sensitivity.png)
 
-### 4. ⚠️ Risk
+### 4. Risk
 
 This tab models the P&L of **buying the option at its fair price and holding it to expiry**. VaR and Expected Shortfall are read straight off the simulated distribution.
 
@@ -85,7 +85,7 @@ A long option's P&L is not bell-shaped. Every path that expires worthless loses 
 
 ![Risk](docs/screenshots/risk.png)
 
-### 5. 📚 Theory
+### 5. Theory
 
 A reference page with every formula the app uses.
 

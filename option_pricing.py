@@ -5,7 +5,7 @@ from scipy.stats import norm
 
 from models import black_scholes, greeks, monte_carlo_option, simulate_paths
 
-st.set_page_config(page_title="Options Pricing", page_icon="💰", layout="wide")
+st.set_page_config(page_title="Options Pricing", layout="wide")
 
 ACCENT, BLUE, RED, GREEN, MUTED = "#c584f7", "#5fa8f5", "#f26d6d", "#4fd1a1", "#8b8b9a"
 st.markdown(
@@ -39,7 +39,7 @@ def vline(fig, x, label, color, dash="dash", pos="top right"):
 
 # ---------------- Sidebar inputs ----------------
 with st.sidebar:
-    st.header("⚙️ Option Parameters")
+    st.header("Option Parameters")
     option_type = st.segmented_control("Option type", ["call", "put"], default="call",
                                        format_func=str.capitalize) or "call"
     S = st.number_input("Spot price  S₀", min_value=0.01, value=100.0, step=1.0)
@@ -48,7 +48,7 @@ with st.sidebar:
     r = st.slider("Risk-free rate  r", 0.0, 0.20, 0.05, 0.005, format="%.3f")
     sigma = st.slider("Volatility  σ", 0.01, 1.50, 0.20, 0.01)
 
-    st.header("🎲 Simulation")
+    st.header("Simulation")
     simulations = st.slider("Monte Carlo paths", 1_000, 100_000, 20_000, 1_000)
     confidence = st.select_slider("Risk confidence level", [0.90, 0.95, 0.975, 0.99], value=0.95,
                                   format_func=lambda c: f"{c:.1%}")
@@ -74,7 +74,7 @@ VaR = -np.percentile(pnl, (1 - confidence) * 100)
 ES = -pnl[pnl <= -VaR].mean()
 
 # ---------------- Header & KPIs ----------------
-st.title("💰 Option Pricing & Risk Lab")
+st.title("Option Pricing & Risk Lab")
 st.caption(f"European **{option_type}** · S₀ = {S:,.2f} · K = {K:,.2f} · "
            f"T = {T:.2f}y · r = {r:.2%} · σ = {sigma:.0%}")
 
@@ -91,7 +91,7 @@ k5.metric("Prob. finishing ITM", f"{prob_itm:.1%}", help="Risk-neutral N(d₂) (
 
 st.write("")
 tab_price, tab_mc, tab_sens, tab_risk, tab_theory = st.tabs(
-    ["📐 Pricing & Greeks", "🎲 Monte Carlo", "🌡️ Sensitivity", "⚠️ Risk", "📚 Theory"]
+    ["Pricing & Greeks", "Monte Carlo", "Sensitivity", "Risk", "Theory"]
 )
 
 # ---------------- Pricing & Greeks ----------------
@@ -218,7 +218,6 @@ with tab_risk:
         f"${bs_price:,.2f}. The tall bar on the left is every path that expires worthless — "
         "a long option's loss distribution is lumpy, not bell-shaped. When more than (1 − confidence) of paths "
         "expire worthless, VaR and ES both equal the full premium.",
-        icon="💡",
     )
 
 # ---------------- Theory ----------------
